@@ -1,11 +1,25 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+
 }
 
 android {
     namespace 'com.alanafdev.retrofit'
     compileSdk 32
+
+    buildFeatures {
+        viewBinding true
+
+
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
 
     defaultConfig {
         applicationId "com.alanafdev.retrofit"
